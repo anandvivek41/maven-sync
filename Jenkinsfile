@@ -1,6 +1,7 @@
- def sayHello(String a){
-        echo "Hello $a"
-    }
+ @Library('pipeline-library-demo')_
+//def sayHello(String a){
+ //       echo "Hello $a"
+ //   }
 
 pipeline {
    
@@ -11,7 +12,7 @@ pipeline {
      
         stage('greet') {
             steps{
-                sayHello "Vivek"
+                sayHello 'Vivek'
             }
         }
      stage('prepare') {
