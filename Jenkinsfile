@@ -3,7 +3,7 @@
 //    echo "Hello, ${name}."
 // }
 pipeline {
-    agent { label 'maven-label' }
+    agent { label 'maven' }
 
     stages {
         stage('greet') {
