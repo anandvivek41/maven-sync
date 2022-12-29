@@ -21,10 +21,10 @@ pipeline {
                SONAR_TOKEN = credentials('SONAR_TOKEN')
           }
             steps {
-                sh 'mvn clean deploy'
-                withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
+                // sh 'mvn clean deploy'
+               // withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
                    sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=anandvivek41_maven-sync'
-               }
+              // }
             }
         }
         stage('deploy-dev') {
