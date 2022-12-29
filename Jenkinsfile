@@ -4,7 +4,7 @@ pipeline {
     stages {
      stage('prepare') {
             steps {
-                git branch: 'main', url: 'https://github.com/quick-abc/maven-sync.git'
+                git branch: 'main', url: 'https://github.com/anandvivek41/maven-sync.git'
             }
         }
         stage('build') {
