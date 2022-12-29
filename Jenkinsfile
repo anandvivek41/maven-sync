@@ -25,7 +25,7 @@ pipeline {
         }
         stage('deploy-prod') {
             steps {
-                input 'Please provide approval for prod deployment'
+                input 'Please provide approval for production deployment'
                 echo "deploying an appln in prod"
             }
         }
