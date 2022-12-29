@@ -1,17 +1,27 @@
 pipeline {
-    agent { label 'maven' }
+    def sayHello(String a){
+        echo "Hello $a"
+    }
+//    agent { label 'maven' }
+    agent any
 
     stages {
+     
+        stage('greet') {
+            steps{
+                sayHello "Vivek"
+            }
+        }
      stage('prepare') {
             steps {
                 git branch: 'main', url: 'https://github.com/anandvivek41/maven-sync.git'
             }
         }
-        stage('build') {
-            steps {
-                sh 'mvn clean deploy'
-                }
-            }
+//        stage('build') {
+//            steps {
+//                sh 'mvn clean deploy'
+//                }
+//            }
         stage('deploy-dev') {
             steps {
                 echo "deploying an appln in devo"
