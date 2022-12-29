@@ -1,7 +1,9 @@
-pipeline {
-    def sayHello(String a){
+ def sayHello(String a){
         echo "Hello $a"
     }
+
+pipeline {
+   
 //    agent { label 'maven' }
     agent any
 
